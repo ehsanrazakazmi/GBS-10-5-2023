@@ -62,7 +62,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/logout', [SessionsController::class, 'destroy']);
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
 	Route::post('/user-profile', [InfoUserController::class, 'store']);
-    // Route::get('/login', function () {return view('dashboard');})->name('sign-up');
+    // Route::get('/login', function () {return view('dashboard');})->name('sign-up')
 
     Route::group(['prefix'=> 'categories'], function(){       
         Route::get('/', [CategoryController::class, 'index'])->name('adminpanel.categories');

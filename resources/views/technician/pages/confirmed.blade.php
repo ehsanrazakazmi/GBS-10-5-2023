@@ -5,8 +5,8 @@
 <div class="container">
     <div class="text-end mb-5">
     </div>
-    <div class="col">
-        <div class="col-3">
+    <div class="row">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h5>Confirmed Orders</h5>
@@ -17,7 +17,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>Status</th>
-                                
+                                <th>Created at</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -26,7 +26,7 @@
                             <tr>
                                 <td>{{$orderconfirm->id}}</td>
                                 <td>{{$orderconfirm->status}}</td>
-                                
+                                <td>{{\Carbon\Carbon::parse($orderconfirm->created_at)->format('Y-m-d H:i:s')}}</td>
                             </tr>
                             @endforeach
                         </tbody>

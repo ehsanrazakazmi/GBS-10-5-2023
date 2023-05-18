@@ -28,25 +28,32 @@
 <div class="container">
     <div class="text-end mb-5">
     </div>
-    <div class="col">
-        <div class="col-3">
+    <div class="row">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-header">
-                    <h5>Details</h5>
+                    <h5>Technician Profile Picture</h5>
                 </div>
-                <div class="card-body"  style="background-color: rgb(137, 100, 162)">
-                    <p style="color: rgb(32, 38, 212)">Name: {{Auth::user()->name}}</p>
-                    <p style="color: rgb(32, 38, 212)">Email: {{Auth::user()->email}}</p>
-                    <p style="color: rgb(32, 38, 212)">Phone Number: {{Auth::user()->ph_no}}</p>
-                    <img src="{{ asset('storage/'.Auth::user()->profile_photo_path) }}" alt="..." class="w-100 border-radius-lg shadow-sm" style="border-radius: 60%;">
-
-                    <div class="d-flex mt-2" >
-                        <a href="{{route('technicianpanel.pages.profile')}}"><button class="btn btn-primary" >Edit Profile</button></a>
+                <div class="card-body" style="background-color: rgb(137, 100, 162)">
+                    <img src="{{ asset('storage/'.Auth::user()->profile_photo_path) }}" alt="..." class="w-100 border-radius-lg shadow-sm">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Technician Information</h5>
+                </div>
+                <div class="card-body" style="background-color: rgb(137, 100, 162)">
+                    <p style="color: purple" class="text-primary">Name: {{Auth::user()->name}}</p>
+                    <p style="color: purple">Email: {{Auth::user()->email}}</p>
+                    <p style="color: purple">Phone Number: {{Auth::user()->ph_no}}</p>
+                    <div class="d-flex mt-2">
+                        <a href="{{route('technicianpanel.pages.profile')}}"><button class="btn btn-primary">Edit Profile</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 @endsection

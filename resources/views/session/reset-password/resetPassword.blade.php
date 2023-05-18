@@ -11,7 +11,7 @@
                         <h4 class="mb-0">Change password</h4>
                     </div>
                     <div class="card-body">
-                        <form role="form" action="/reset-password" method="POST">
+                        <form role="form" action="{{ route('password.update') }}" method="POST">
                             @csrf
                             <input type="hidden" name="token" value="{{ $token }}">
                             <div>

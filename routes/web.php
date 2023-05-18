@@ -101,10 +101,10 @@ Route::group(['middleware' => 'admin'], function () {
 //     Route::post('/register', [RegisterController::class, 'store']);
 //     Route::get('/login', [LoginController::class, 'create']);
 //     // Route::post('/session', [SessionsController::class, 'store']);
-// 	Route::get('/login/forgot-password', [ResetController::class, 'create']);
-// 	Route::post('/forgot-password', [ForgotPasswordController::class, 'sendEmail']);
-// 	Route::get('/reset-password/{token}', [ResetPasswordController::class, 'resetPass'])->name('password.reset');
-// 	Route::post('/reset-password', [ChangePasswordController::class, 'changePassword'])->name('password.update');
+	Route::get('/login/forgot-password', [ResetController::class, 'create']);
+	Route::post('/forgot-password', [ForgotPasswordController::class, 'sendEmail']);
+	Route::get('/reset-password/{token}', [ResetPasswordController::class, 'resetPass'])->name('password.reset');
+	Route::post('/reset-password', [ChangePasswordController::class, 'changePassword'])->name('password.update');
 // });
 
 // Route::get('/login', function () {return view('session/login-session');})->name('login');

@@ -16,11 +16,10 @@
             Admin
         @elseif ($user->role === '3')
             Technician
-
         @endif
     </h1>
     <p>Your Email is:  &nbsp; {{ $user->email }}</p>
     <p>Your Name is:  {{ $user->name }}</p>
-    <p>Your Password is:  {{ $user->password }}</p>
+    {{-- <p>Your Password is:  {{ $user->password }}</p> --}}
 </body>
 </html>

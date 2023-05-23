@@ -2,20 +2,20 @@
 
 @section('content')
 
-<div>
+<div >
     <div class="alert alert-secondary mx-4" role="alert">
         <span class="text-white">
             <strong>Add, Edit, Delete the Users (Technicians) here!</strong>
         </span>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4 mx-4 p-3">
-                <div class="card-header pb-0">
+    <div class="row" >
+        <div class="col-12" >
+            <div class="card mb-4 mx-4 p-3" style="background-color: rgb(172, 245, 221)">
+                <div class="card-header pb-0" style="background-color: rgb(172, 245, 221)">
                     <div class="mb-3 d-flex flex-row justify-content-between">
                         <div>
-                            <h5 class="mb-0">All Technicians</h5>
+                            <h5 class="mb-0" style="font-size: 24px">All Technicians</h5>
                         </div>
                         <a href="{{route('adminpanel.technicians.create')}}" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp;Add Technician</a>
                     </div>
@@ -25,28 +25,28 @@
                         <table class="table align-items-center mb-0" id = 'myTable'>
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         ID
                                     </th>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    <th >
                                         Photo
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         Title
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         Basic Pakage
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         role
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th>
                                         Availability Time
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         Creation Date
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th >
                                         Action
                                     </th>
                                 </tr>

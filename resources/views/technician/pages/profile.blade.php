@@ -82,12 +82,12 @@
                 <div class="card-header">
                     <h5>Edit profile here</h5>
                 </div>
-                <form action="{{ route('technicianpanel.pages.store') }}" method="post" role="form text-left" enctype="multipart/form-data"  style="background-color: rgb(115, 79, 141)">
+                <form action="{{ route('technicianpanel.pages.store') }}" method="post" role="form text-left" enctype="multipart/form-data"  style="background-color: rgb(90, 88, 245)">
                     @csrf
                 <div class="card-body" >
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-name" class="form-control-label">{{ __('Full Name') }}</label>
+                                <label for="user-name" class="form-control-label"><strong> {{ __('Full Name') }}</strong></label>
                                 <div class="@error('user.name')border border-danger rounded-3 @enderror">
                                     <input class="form-control" value="{{ auth()->user()->name }}" type="text" placeholder="Name" id="user-name" name="name">
                                         @error('name')
@@ -98,7 +98,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-email" class="form-control-label">{{ __('Email') }}</label>
+                                <label for="user-email" class="form-control-label"><strong>{{ __('Email') }}</strong></label>
                                 <div class="@error('email')border border-danger rounded-3 @enderror">
                                     <input class="form-control" value="{{ auth()->user()->email }}" type="email" placeholder="@example.com" id="user-email" name="email">
                                         @error('email')
@@ -109,7 +109,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-email" class="form-control-label">{{ __('Phone Number') }}</label>
+                                <label for="user-email" class="form-control-label"><strong>{{ __('Phone Number') }}</strong></label>
                                 <div class="@error('email')border border-danger rounded-3 @enderror">
                                     <input class="form-control" value="{{ auth()->user()->ph_no }}" type="text" placeholder="03000000000" id="user-ph_no" name="ph_no">
                                         @error('email')
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="user.phone" class="form-control-label">{{ __('Profile Image') }}</label>
+                            <label for="user.phone" class="form-control-label"><strong>{{ __('Profile Image') }}</strong></label>
                             <div class="@error('user.phone')border border-danger rounded-3 @enderror">
                                 <input name="profile_photo_path" class="form-control" type="file" placeholder="upload your picture here" id="image" >
                                     @error('phone')

@@ -10,20 +10,20 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="card mb-4 mx-4 p-3">
+            <div class="card mb-4 mx-4 p-3" >
                 <div class="card-header pb-0">
                     
                 </div>
-                <div class="card-body px-0 pt-0 pb-2">
-                    <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0"  style="background-color: rgb(255, 255, 255)" >
+                <div class="card-body px-0 pt-0 pb-2" >
+                    <div class="table-responsive p-0" style="background-color: rgb(172, 245, 221)" >
+                        <table class="table align-items-center mb-0"  style="background-color: rgb(172, 245, 221)" >
                             <tbody>
                                 <tr>
-                                    <td>Order Id</td>
+                                    <td style="font-weight: bold;">Order Id</td>
                                     <td>{{$order->id}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Status</td>
+                                    <td style="font-weight: bold;">Status</td>
                                     <td>
                                     <form action="{{route('orders.view',$order->id)}}" method="post" enctype="multipart/form-data" style="display: flex; gap: 15px; max-width: 300px">
                                             @csrf
@@ -33,44 +33,44 @@
                                                     <option value="{{$status}}" @if($order->status == $status) selected @endif>{{$status}}</option>
                                                 @endforeach
                                             </select>
-                                            <button type="submit" class="btn btn-success">Update status</button>
+                                            <button type="submit" class="btn btn-primary">Update status</button>
                                         </form>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Total Amount<br> (Approximated Charges)</td>
+                                    <td style="font-weight: bold;">Total Amount<br> (Approximated Charges)</td>
                                     <td>{{$order->total}}</td>
                                 </tr>
                                 <tr>
-                                    <td>User</td>
+                                    <td style="font-weight: bold;">User</td>
                                     <td>{{$order->name}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
+                                    <td style="font-weight: bold;">Email</td>
                                     <td>{{$order->email}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Phone</td>
+                                    <td style="font-weight: bold;">Phone</td>
                                     <td>{{$order->phone}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Country</td>
+                                    <td style="font-weight: bold;">Category</td>
                                     <td>{{$order->country}}</td>
                                 </tr>
                                 <tr>
-                                    <td>State</td>
+                                    <td style="font-weight: bold;">State</td>
                                     <td>{{$order->state}}</td>
                                 </tr>
                                 <tr>
-                                    <td>City/td>
+                                    <td style="font-weight: bold;">City</td>
                                     <td>{{$order->city}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Zip Code</td>
+                                    <td style="font-weight: bold;">Zip Code</td>
                                     <td>{{$order->zip}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Address</td>
+                                    <td style="font-weight: bold;">Address</td>
                                     <td>{{$order->address}}</td>
                                 </tr>
                                 <tr>

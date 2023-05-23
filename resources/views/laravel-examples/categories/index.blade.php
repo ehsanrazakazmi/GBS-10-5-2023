@@ -12,13 +12,13 @@
               
 
 
-              <div class="row mb-5">
-                <div class="col-md-6 offser-md-3">
-                    <div class="card">
-                        <div class="card-header">
+              <div class="row mb-5" >
+                <div class="col-md-6 offser-md-3" >
+                    <div class="card" style="background-color: rgb(172, 245, 221)">
+                        <div class="card-header" style="background-color: rgb(172, 245, 221)">
                             <h5>Create Category</h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" >
                             <form action="{{route('adminpanel.category.store')}}" method="post">
                                 @csrf
                                 <div class="form-group mb-3">
@@ -41,8 +41,8 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card" style="background-color: rgb(172, 245, 221)">
+                        <div class="card-header" style="background-color: rgb(172, 245, 221)">
                             <h5>Categories</h5>
                         </div>
                         <div class="card-body">

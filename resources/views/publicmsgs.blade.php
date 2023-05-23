@@ -10,11 +10,11 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <div class="card mb-4 mx-4 p-3">
-                <div class="card-header pb-0">
+        <div class="col-12" >
+            <div class="card mb-4 mx-4 p-3" style="background-color: rgb(172, 245, 221)">
+                <div class="card-header pb-0" style="background-color: rgb(172, 245, 221)">
                     <div class="mb-3 d-flex flex-row justify-content-between">
-                        <div>
+                        <div >
                             <h5 class="mb-0">All msgs</h5>
                         </div>
                     </div>

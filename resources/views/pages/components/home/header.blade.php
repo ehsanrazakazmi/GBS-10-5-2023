@@ -5,7 +5,5 @@
 
 
     </div>
-<div class="home-header-search">
-    <input type="text" name="query" placeholder="Search ... ">
-</div>
+
 </header>

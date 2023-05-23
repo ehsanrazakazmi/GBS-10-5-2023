@@ -4,7 +4,7 @@
 
 <div>
 
-           <div class="container">
+           <div class="container" style="background-color: rgb(172, 245, 221)">
                 <div class="row">
                    <div class="col-md-6 offser-md-1">
                     <form action="{{ route ('sendmail') }}" method="post">

@@ -416,7 +416,7 @@ address { font-style: normal; }
             </div>
           </div>
           <div class="right box">
-            <h2>Contact us</h2>
+            <h2 style="color: wh">Contact us</h2>
             <div class="content">
               <form action="{{ route ('public.store') }}" method="post">
                 @csrf
@@ -441,7 +441,7 @@ address { font-style: normal; }
               </div>
               <br>
 
-              <div class="btn-primary">
+              <div class="btn-secondary">
                 <input type="submit" value="Submit" class="btn btn-success">
               </div>
               </form>

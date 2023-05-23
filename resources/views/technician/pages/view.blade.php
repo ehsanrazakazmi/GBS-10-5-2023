@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0" id = 'myTable' style="background-color: rgb(65, 54, 147)" >
+                        <table class="table align-items-center mb-0" id = 'myTable' style="background-color: rgb(90, 88, 245)" >
                             <tbody>
                                 <tr>
                                     <td>Order Id</td>
@@ -54,7 +54,7 @@
                                     <td>{{$order->phone}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Country</td>
+                                    <td>Category</td>
                                     <td>{{$order->country}}</td>
                                 </tr>
                                 <tr>

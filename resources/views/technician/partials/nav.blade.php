@@ -30,7 +30,7 @@
                     trigger="hover"
                     colors="primary:#121331"
                     style="width:40px;height:40px">
-                </lord-icon>&nbsp;Orders History</a>
+                </lord-icon>&nbsp;Confirmed Orders</a>
         </li>
         <li>
             <a href="{{route('chatting')}}"><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>

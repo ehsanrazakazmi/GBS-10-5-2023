@@ -18,19 +18,22 @@ class resident
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check()) {
+        if(!Auth::check()){
             return redirect('/login');
         }
 
-        $user = Auth::user();
-        if ($user->role == 2) { //resident
+        $user=Auth::user();
+        if($user->role ==1){ //resident
             return $next($request);
+
         }
-        if ($user->role == 1) {
+        if($user->role ==2){
             return redirect('/adminpanel');
+
         }
-        if ($user->role == 3) {
+        if($user->role ==3){
             return redirect('/technicianpanel');
+
         }
         // if($user->role ==4){
         //     return redirect('/staff');

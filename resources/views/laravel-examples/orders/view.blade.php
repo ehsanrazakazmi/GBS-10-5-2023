@@ -55,11 +55,27 @@
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">Category</td>
-                                    <td>{{$order->category_id}}</td>
+                                    <td>{{$order->country}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">State</td>
+                                    <td>{{$order->state}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">City</td>
+                                    <td>{{$order->city}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">Zip Code</td>
+                                    <td>{{$order->zip}}</td>
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">Address</td>
                                     <td>{{$order->address}}</td>
+                                </tr>
+                                <tr>
+                                    {{-- <td>Stripped</td>
+                                    <td>{{$order->strie_id}}</td> --}}
                                 </tr>
                             </tbody>
                         </table>

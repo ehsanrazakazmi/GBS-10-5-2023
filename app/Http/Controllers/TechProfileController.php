@@ -32,9 +32,9 @@ class TechProfileController extends Controller
             if(env('IS_DEMO') && Auth::user()->id == 1)
             {
                 return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t change the email address.']);
-                
+
             }
-            
+
         }
         else{
             $attribute = request()->validate([
@@ -45,10 +45,10 @@ class TechProfileController extends Controller
             $path = $request->file('profile_photo_path')->store('public/profile_pics');
             $path = str_replace('public/', '', $path);
         }
-        
-        
+
+
         User::where('id',Auth::user()->id)->update([
-            
+
             'name'    => $attributes['name'],
             'email' => $attributes['email'],
             'profile_photo_path' => $path ?? Auth::user()->profile_photo_path,
@@ -60,6 +60,6 @@ class TechProfileController extends Controller
         ]);
 
 
-        return redirect('technicianpanel/profile')->with('success','Profile has been updated ');
+        return redirect('technicianpanel/introduction')->with('success','Profile has been updated ');
     }
 }

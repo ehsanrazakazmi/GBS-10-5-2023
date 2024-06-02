@@ -23,15 +23,14 @@ class TechnicianController extends Controller
     public function dashboard()
     {
         $order = DB::select('SELECT * from orders WHERE status = ?', ['shipped']);
-        
+
         return view('technician.pages.dashboard')->with(['order' => $order]);
     }
     public function view($id)
     {
         $states = ['accepted'];
-        $order = Order::with('user', 'items', 'items.services', 'items.color')-> findOrFail($id);
+        $order = Order::with('user', 'items', 'items.services', 'items.color')->findOrFail($id);
         return view('technician.pages.view', ['order' => $order, 'states' => $states]);
-        
     }
     public function store(Request $request)
     {
@@ -42,16 +41,7 @@ class TechnicianController extends Controller
         Notification::send($user, new TechOrderNotification($request->id));
         return redirect()->back();
     }
-  
-   
-    
-    // public function profile()
-    // {
-    //     $id = 1;
-    //     $products = Product::find($id);
-    //     return view('technician.pages.profile.profile', ['products' => $products]);
-    // }
-     public function confirmed()
+    public function confirmed()
     {
         $orderconfirm = orderconfirm::all();
         return view('technician.pages.confirmed')->with(['orderconfirm' => $orderconfirm]);
@@ -60,15 +50,10 @@ class TechnicianController extends Controller
     {
         Order::findOrFail($id)->update(['status' => $request->status]);
         return back()->with('success', 'Order Updated!');
-
     }
 
-    public function chat(){
+    public function chat()
+    {
         return view('technician.pages.chat');
     }
-
-
-    
-    
-    
 }

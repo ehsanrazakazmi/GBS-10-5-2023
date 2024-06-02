@@ -15,10 +15,6 @@ return new class extends Migration
     {
         Schema::create('orderconfirms', function (Blueprint $table) {
             $table->id();
-            // $table->string('name');
-            // $table->string('email');
-            // $table->string('phone');
-            // $table->string('address');
             $table->string('status');
             $table->timestamps();
         });
